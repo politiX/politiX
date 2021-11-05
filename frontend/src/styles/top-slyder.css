@@ -1,0 +1,7 @@
+.sliderNav {
+    display: flex;
+}
+
+.placeholder {
+    width: 0 !important;
+}
