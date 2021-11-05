@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/micro-articles",
+      "handler": "micro-article.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/micro-articles/count",
+      "handler": "micro-article.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/micro-articles/:id",
+      "handler": "micro-article.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/micro-articles",
+      "handler": "micro-article.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/micro-articles/:id",
+      "handler": "micro-article.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/micro-articles/:id",
+      "handler": "micro-article.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
