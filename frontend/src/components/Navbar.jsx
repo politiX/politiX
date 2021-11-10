@@ -14,6 +14,9 @@ export default function Navbar() {
 
     const Menu = (e) => {
 
+        // animate nav bar
+        // trigger function to load contentgit pou
+
         console.log(e.target.id)
     }
 
