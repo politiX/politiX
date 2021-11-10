@@ -16,6 +16,7 @@ export default function Navbar() {
 
         // animate nav bar
         // trigger function to load contentgit pou
+        // Matej stinkt
 
         console.log(e.target.id)
     }
