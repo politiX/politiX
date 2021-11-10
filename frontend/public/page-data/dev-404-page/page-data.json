@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---cache-dev-404-page-js",
     "path": "/dev-404-page/",
-    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/404/"},{"path":"/404.html"},{"path":"/about/"},{"path":"/bildung/"},{"path":"/gesundheit/"},{"path":"/"},{"path":"/umwelt/"},{"path":"/wirtschaft/"}]}},"pageContext":{}},
+    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/404.html"},{"path":"/404/"},{"path":"/about/"},{"path":"/bildung/"},{"path":"/gesundheit/"},{"path":"/"},{"path":"/umwelt/"},{"path":"/wirtschaft/"}]}},"pageContext":{}},
     "staticQueryHashes": []}

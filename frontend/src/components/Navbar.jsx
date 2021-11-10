@@ -8,7 +8,7 @@ export default function Navbar() {
     const [categories, setCategories] = useState([
         {name: 'Bildung', id: 0},
         {name: 'Umwelt', id: 1},
-        {name: 'Gesungheit', id: 2},
+        {name: 'Gesundheit', id: 2},
         {name: 'Wirtschaft', id: 3}
     ]);
 
