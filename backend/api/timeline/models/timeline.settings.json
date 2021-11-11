@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timelines",
+  "info": {
+    "name": "Timeline",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Preview": {
+      "type": "text",
+      "required": true
+    },
+    "datum": {
+      "type": "date",
+      "required": true,
+      "unique": false
+    },
+    "articles": {
+      "type": "dynamiczone",
+      "components": [
+        "timeline.article"
+      ]
+    }
+  }
+}

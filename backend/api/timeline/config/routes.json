@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/micro-articles",
-      "handler": "micro-article.find",
+      "path": "/timelines",
+      "handler": "timeline.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/micro-articles/count",
-      "handler": "micro-article.count",
+      "path": "/timelines/count",
+      "handler": "timeline.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/micro-articles/:id",
-      "handler": "micro-article.findOne",
+      "path": "/timelines/:id",
+      "handler": "timeline.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/micro-articles",
-      "handler": "micro-article.create",
+      "path": "/timelines",
+      "handler": "timeline.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/micro-articles/:id",
-      "handler": "micro-article.update",
+      "path": "/timelines/:id",
+      "handler": "timeline.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/micro-articles/:id",
-      "handler": "micro-article.delete",
+      "path": "/timelines/:id",
+      "handler": "timeline.delete",
       "config": {
         "policies": []
       }
