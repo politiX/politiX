@@ -12,23 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titel": {
-      "type": "string"
+    "titel": {
+      "type": "string",
+      "required": true
     },
-    "Preview": {
+    "preview": {
       "type": "text",
       "required": true
     },
-    "datum": {
-      "type": "date",
-      "required": true,
-      "unique": false
-    },
     "articles": {
-      "type": "dynamiczone",
-      "components": [
-        "timeline.article"
-      ]
+      "collection": "article",
+      "via": "timeline"
     }
   }
 }
