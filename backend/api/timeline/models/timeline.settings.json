@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timelines",
+  "info": {
+    "name": "Timeline",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titel": {
+      "type": "string",
+      "required": true
+    },
+    "preview": {
+      "type": "text",
+      "required": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "timeline"
+    }
+  }
+}
