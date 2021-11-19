@@ -35,6 +35,11 @@ header {
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
     z-index: 1;
+    margin-bottom: 5px;
+}
+
+.header {
+    background-color: white;
 }
 
 .menu-ico {
@@ -48,22 +53,7 @@ header {
 nav {
     background-color: #FCFCFC;
     padding: 10px 2.5%;
-    margin-bottom: 10px;
     cursor: pointer;
-}
-
-nav .links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-nav div:hover {
-    color: orange;
-}
-
-nav div:active {
-    color: orange;
 }
 
 .content {

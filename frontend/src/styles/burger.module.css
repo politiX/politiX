@@ -1,0 +1,9 @@
+.w {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+}
+
+.w.active {
+    display: flex;
+}

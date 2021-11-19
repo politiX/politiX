@@ -1,16 +1,14 @@
 import React from "react";
-// import { Link } from "gatsby"
+import Top from "./Top";
+import Nav from './Swipe';
 
 export default function Header() {
-  return (
-    <header>
-      <a href="/">
-        <img src="/logo.svg" alt="politiX" />
-      </a>
-      <div className="menu-ico">
-        <img src="/profile.svg" alt="profile" style={{ width: "100%" }} />
-        <img src="/menu.svg" alt="menu" style={{ width: "100%" }} />
-      </div>
-    </header>
-  );
+    return (
+        <div className='header'>
+            <Top/>
+            <nav>
+                <Nav/>
+            </nav>
+        </div>
+    );
 }

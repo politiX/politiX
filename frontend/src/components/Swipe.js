@@ -12,7 +12,7 @@ import SwiperCore, { Grid } from "swiper";
 // install Swiper modules
 SwiperCore.use([Grid]);
 
-export default function Swiping() {
+export default function Nav() {
   return (
     <>
       <Swiper
