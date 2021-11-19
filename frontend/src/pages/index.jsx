@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Layout>
-        <h1>this is the content</h1>
+        <h1>this is the starting page</h1>
       </Layout>
     </div>
   );
