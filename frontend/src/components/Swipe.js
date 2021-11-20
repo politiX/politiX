@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react"
+import {useState} from "react"
 import {Pagination, A11y} from 'swiper'
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -19,7 +19,10 @@ export default function Nav() {
     const handleSwiperClick = (e) => {
         console.log('load content for', e.target.innerText)
 
-    //    trigger function in Layout component or index page to load content...
+        //    trigger function in Layout component or index page to load content...
+
+        //    set dynamic nested rout (URL):
+        //    ---> https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
     }
 
     return (
@@ -38,8 +41,10 @@ export default function Nav() {
                 simulateTouch={true}
                 slideToClickedSlide={true}
                 simulateTouch={true}
-                onSwipe={() => { console.log('swipe')}}
-                pagination={{ clickable: true }}
+                onSwipe={() => {
+                    console.log('swipe')
+                }}
+                pagination={{clickable: true}}
             >
                 <SwiperSlide>
                     <p onClick={handleSwiperClick}>Bildung</p>
