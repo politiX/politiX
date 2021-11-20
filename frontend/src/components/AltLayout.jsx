@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/global.css';
 import Top from './Top';
 
-export default function Alt_Layout({ children }) {
+export default function AltLayout({ children }) {
     return (
         <div className='layout alt'>
             <Top />

@@ -1,48 +1,60 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
+import { useState } from "react"
+import {Pagination, A11y} from 'swiper'
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
+import "../styles/swipe.css"
 
 // import Swiper core and required modules
-import SwiperCore, { Grid } from "swiper";
+import SwiperCore, {Grid} from "swiper";
 
 // install Swiper modules
 SwiperCore.use([Grid]);
 
 export default function Nav() {
-  return (
-    <>
-      <Swiper
-        slidesPerView={3}
-        grid={{
-          rows: 1,
-        }}
-        loop={true}
-        spaceBetween={30}
-        className="mySwiper"
-        clickable={false}
-        shortSwipes={false}
-        simulateTouch={true}
-      >
-        <SwiperSlide>
-          <a href="/bildung">Bildung</a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="/umwelt">Umwelt</a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="/gesundheit">Gesundheit</a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="/wirtschaft">Wirtschaft</a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="/about">Über uns</a>
-        </SwiperSlide>
-      </Swiper>
-    </>
-  );
+
+    const handleSwiperClick = (e) => {
+        console.log('load content for', e.target.innerText)
+
+    //    trigger function in Layout component or index page to load content...
+    }
+
+    return (
+        <>
+            <Swiper
+                moddules={[Pagination, A11y]}
+                slidesPerView={4}
+                grid={{
+                    rows: 1,
+                }}
+                loop={true}
+                spaceBetween={50}
+                className="mySwiper"
+                clickable={0}
+                shortSwipes={false}
+                simulateTouch={true}
+                slideToClickedSlide={true}
+                simulateTouch={true}
+                onSwipe={() => { console.log('swipe')}}
+                pagination={{ clickable: true }}
+            >
+                <SwiperSlide>
+                    <p onClick={handleSwiperClick}>Bildung</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <p onClick={handleSwiperClick}>Umwelt</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <p onClick={handleSwiperClick}>Gesundheit</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <p onClick={handleSwiperClick}>Wirtschaft</p>
+                </SwiperSlide>
+
+            </Swiper>
+        </>
+    );
 }

@@ -1,12 +1,12 @@
 import React from "react"
-import Alt_Layout from "../components/Alt_Layout";
+import AltLayout from "../components/AltLayout";
 
 export default function Impressum() {
     return (
         <div>
-            <Alt_Layout>
+            <AltLayout>
                 <h1>This is the PolitiX Impressum</h1>
-            </Alt_Layout>
+            </AltLayout>
         </div>
     )
 }

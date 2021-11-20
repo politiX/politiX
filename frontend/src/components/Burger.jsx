@@ -6,7 +6,7 @@ export default function Burger() {
     return (
         <div className={styles.ww}>
             <div className={styles.w}>
-                <Link to='/index'><p>Home</p></Link>
+                <Link to='/'><p>Home</p></Link>
                 <Link to='/profile'><p>Profil</p></Link>
                 <Link to='/about'><p>About</p></Link>
                 <Link to='/login'><p>Logout</p></Link>

@@ -39,6 +39,8 @@ header {
 
 .header {
     background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 .menu-ico {

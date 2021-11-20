@@ -10,7 +10,7 @@ export default function Top() {
         let state = e.target.previousSibling.childNodes[0].classList
         let obj = e.target.previousSibling.childNodes[0]
 
-        if (state.contains('active') == false) {
+        if (state.contains('active') === false) {
             state.add('active')
             obj.style.top = '-5px'
             setSrc('/close.svg')

@@ -1,16 +1,7 @@
-.swiper{
-    overflow: hidden;
-
-}
-.inner{
-    white-space: nowrap;
-    transition: transform 0,3s;
+.swiper-slide-active {
+    font-weight: bold;
 }
 
-.swipe-item{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    background-color: green;
+.swiper:active {
+    text-decoration: none;
 }
