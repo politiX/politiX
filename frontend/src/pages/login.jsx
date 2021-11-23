@@ -15,7 +15,7 @@ export default function Login() {
         const mail = formData.get('mail')
         const psw = formData.get('psw')
 
-        if (mail != '' && psw != '') {
+        if (mail !== '' && psw !== '') {
             console.log('e-mail:', mail)
             console.log('password:', psw)
 
