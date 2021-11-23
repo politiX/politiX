@@ -23,6 +23,10 @@
     "articles": {
       "collection": "article",
       "via": "timeline"
+    },
+    "category": {
+      "via": "timelines",
+      "model": "categories"
     }
   }
 }
