@@ -23,7 +23,9 @@
 
 .w img {
     width: 60%;
+    max-width: 200px;
 }
+
 
 .w form {
     display: flex;
@@ -65,3 +67,4 @@
     color: #898989;
     border-bottom: 1px solid #898989;
 }
+
