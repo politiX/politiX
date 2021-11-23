@@ -16,6 +16,14 @@ SwiperCore.use([Grid]);
 
 export default function Nav() {
 
+    const categories = ['Bildung', 'Umwelt', 'Gesundheit', 'Wirtschaft']
+
+    const navItems = categories.map((category) =>
+        <SwiperSlide>
+            <p onClick={handleSwiperClick}>{category}</p>
+        </SwiperSlide>
+    )
+
     const handleSwiperClick = (e) => {
         console.log('load content for', e.target.innerText)
 
@@ -46,19 +54,7 @@ export default function Nav() {
                 }}
                 pagination={{clickable: true}}
             >
-                <SwiperSlide>
-                    <p onClick={handleSwiperClick}>Bildung</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p onClick={handleSwiperClick}>Umwelt</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p onClick={handleSwiperClick}>Gesundheit</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p onClick={handleSwiperClick}>Wirtschaft</p>
-                </SwiperSlide>
-
+                {navItems}
             </Swiper>
         </>
     );
