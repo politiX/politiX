@@ -16,14 +16,6 @@ SwiperCore.use([Grid]);
 
 export default function Nav() {
 
-    const categories = ['Bildung', 'Umwelt', 'Gesundheit', 'Wirtschaft']
-
-    const navItems = categories.map((category) =>
-        <SwiperSlide>
-            <p onClick={handleSwiperClick}>{category}</p>
-        </SwiperSlide>
-    )
-
     const handleSwiperClick = (e) => {
         console.log('load content for', e.target.innerText)
 
@@ -32,6 +24,14 @@ export default function Nav() {
         //    set dynamic nested rout (URL):
         //    ---> https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
     }
+
+    const categories = ['Bildung', 'Umwelt', 'Gesundheit', 'Wirtschaft']
+
+    const navItems = categories.map((category, index) =>
+        <SwiperSlide key={index}>
+            <p onClick={handleSwiperClick}>{category}</p>
+        </SwiperSlide>
+    )
 
     return (
         <>
