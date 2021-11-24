@@ -12,7 +12,7 @@ module.exports = {
       options: {
         apiURL: `https://politix-strapi.herokuapp.com`,
         queryLimit: 1000, // Defaults to 100
-        collectionTypes: [`timeline`]
+        collectionTypes: [`timeline`,`categories`,`article`]
       },
     },
   ],
