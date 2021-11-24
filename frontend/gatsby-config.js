@@ -6,5 +6,14 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://politix-strapi.herokuapp.com`,
+        queryLimit: 1000, // Defaults to 100
+        collectionTypes: [`timeline`]
+      },
+    },
+  ],
 }

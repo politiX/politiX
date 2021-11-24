@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-index-jsx",
+    "path": "/",
+    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"id":"Timeline_6191708940670c00167d070c","titel":"Klimakonferenz","preview":"Die Histories aller Klimakonferenzen"}},{"node":{"id":"Timeline_619d8a2ad63eaf00160f8deb","titel":"Bafög","preview":"Die Geschichte des Bafögs vom Anfang an bis in die Gegenwart!"}}]}},"pageContext":{}},
+    "staticQueryHashes": []}
