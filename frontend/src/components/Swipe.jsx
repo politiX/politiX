@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from "react"
+import {graphql} from "gatsby"
 import {Pagination, A11y} from 'swiper'
 import {Swiper, SwiperSlide} from "swiper/react";
 
