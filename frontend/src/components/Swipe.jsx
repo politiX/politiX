@@ -1,7 +1,4 @@
 import React from "react";
-import {useState} from "react"
-import {graphql} from "gatsby"
-import {Pagination, A11y} from 'swiper'
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
@@ -15,18 +12,7 @@ import SwiperCore, {Grid} from "swiper";
 // install Swiper modules
 SwiperCore.use([Grid]);
 
-export default function Nav() {
-
-    const handleSwiperClick = (e) => {
-        console.log('load content for', e.target.innerText)
-
-        //    trigger function in Layout component or index page to load content...
-
-        //    set dynamic nested rout (URL):
-        //    ---> https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
-    }
-
-    const categories = ['Bildung', 'Umwelt', 'Gesundheit', 'Wirtschaft']
+export default function Swipe({categories, handleSwiperClick}) {
 
     const navItems = categories.map((category, index) =>
         <SwiperSlide key={index}>
@@ -37,24 +23,19 @@ export default function Nav() {
     return (
         <>
             <Swiper
-                moddules={[Pagination, A11y]}
-                slidesPerView={4}
+                slidesPerView={3}
                 grid={{
                     rows: 1,
                 }}
                 loop={true}
-                spaceBetween={50}
+                spaceBetween={30}
                 className="mySwiper"
                 clickable={0}
                 shortSwipes={false}
-                simulateTouch={true}
                 slideToClickedSlide={true}
                 simulateTouch={true}
-                onSwipe={() => {
-                    console.log('swipe')
-                }}
-                pagination={{clickable: true}}
             >
+
                 {navItems}
             </Swiper>
         </>

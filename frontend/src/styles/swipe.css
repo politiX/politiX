@@ -1,7 +1,27 @@
-.swiper-slide-active {
-    font-weight: bold;
+.swiper {
+    padding: 10px 2.5%;
+    padding-left: 10%;
+    /*width: 61%;*/
+}
+
+.swiper p {
+    color: #7C7C7C;
 }
 
 .swiper:active {
     text-decoration: none;
+}
+
+.activeCategory {
+    background-color: #F9991B;
+    padding: 10px;
+    padding-right: 5%;
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.12);
+    width: 23%;
+    position: absolute;
+    z-index: 2;
+}
+
+.activeCategory p {
+    color: white;
 }
