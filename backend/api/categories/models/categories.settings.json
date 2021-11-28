@@ -15,8 +15,8 @@
       "type": "string"
     },
     "timelines": {
-      "collection": "timeline",
-      "via": "category"
+      "via": "category",
+      "collection": "timeline"
     }
   }
 }

@@ -27,6 +27,20 @@
     "category": {
       "via": "timelines",
       "model": "categories"
+    },
+    "preview_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "tags": {
+      "via": "timeline",
+      "collection": "tag"
     }
   }
 }
