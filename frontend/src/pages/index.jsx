@@ -2,62 +2,53 @@ import React from "react";
 import Layout from "../components/Layout";
 import "../styles/global.css";
 import "../styles/swipe.css";
+import {
+    useQuery,
+    gql
+} from "@apollo/client";
 
-import {graphql} from 'gatsby';
+const GET_ALL_TIMELINES = gql`
+  query Timelines($categoryTimelines: String!) {
+    timelines(where: { category:{ titel: $categoryTimelines }}) {
+          preview
+          id
+          titel
+          category {
+             id,
+             titel
+          }
+    }
+  }
+  `;
 
-export default function Home({data}) {
+export default function Home() {
+
+    let categoryTimelines = "Bildung";
+
+    const { loading, error, data, refetch } = useQuery(GET_ALL_TIMELINES, {
+        variables: { categoryTimelines: categoryTimelines }
+    });
+
+    if (loading) return null;
+    if (error) console.log(error);
+    if (data) console.log(data);
 
     const loadData = (category) => {
         console.log(category)
 
-        //    query data for specific category
-        //    how to use query variables in static queries?
-        //    is there a workaround using page queries?
-        //    see:      https://www.qed42.com/insights/coe/javascript/querying-static-vs-dynamic-data-gatsby
+        categoryTimelines = category
 
-        //    some think like:
-        // const query = graphql`
-        //     query MyQuery {
-        //         allStrapiTimeline(filter: {category: {titel: {eq: "     >>>>>>> VARIABLE CATEGORY <<<<<<<    "}}}) {
-        //             edges {
-        //                 node {
-        //                     preview
-        //                     id
-        //                     titel
-        //                 }
-        //             }
-        //         }
-        //     }
-        // `
+        refetch({categoryTimelines: category})
     }
-
-    const edges = data.allStrapiTimeline.edges;
-    const timelineItems = edges.map((edges, index) =>
-        <div key={index}>
-            <h1>{edges.node.titel}</h1>
-            <p>{edges.node.preview}</p>
-        </div>
-    )
 
     return (
         <div>
             <Layout loadData={loadData}>
                 <h1>Timelines</h1>
-                {timelineItems}
+                <p>{data.timelines[0].preview}</p>
             </Layout>
         </div>
     );
 }
 
-export const query = graphql`
-query Timeline{
-    allStrapiTimeline{
-        edges {
-            node {
-                id
-                titel
-                preview
-            }
-        }
-    }
-}`;
+

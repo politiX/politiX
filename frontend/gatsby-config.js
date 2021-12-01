@@ -15,5 +15,11 @@ module.exports = {
         collectionTypes: [`timeline`,`categories`,`article`]
       },
     },
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'https://politix-strapi.herokuapp.com/graphql'
+      }
+    }
   ],
 }
