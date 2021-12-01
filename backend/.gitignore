@@ -116,4 +116,4 @@ build
 ############################
 # config stuff
 ############################
-extensions/upload/config/settings.json
+#extensions/upload/config/settings.json
