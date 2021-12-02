@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import "../styles/global.css";
 import "../styles/swipe.css";
@@ -39,13 +40,17 @@ export default function Home() {
         categoryTimelines = category
 
         refetch({categoryTimelines: category})
+
+        // console.log('here i am', data.timelines[0].titel)
     }
 
     return (
         <div>
             <Layout loadData={loadData}>
                 <h1>Timelines</h1>
-                <p>{data.timelines[0].preview}</p>
+                <Link to={'/timelines/' + data.timelines[0].titel}>
+                    <p>{data.timelines[0].preview}</p>
+                </Link>
             </Layout>
         </div>
     );
