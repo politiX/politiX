@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Preview from "../components/Preview";
 import "../styles/global.css";
 import "../styles/swipe.css";
+import "../styles/font.css";
 import {
     useQuery,
     gql
