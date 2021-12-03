@@ -1,20 +1,60 @@
 import React from "react";
-// import Layout from "../components/Layout";
-// import styles from '../styles/timeline.module.css'
+import Layout from "../components/Layout";
+import {graphql, navigate} from "gatsby";
+import * as styles from '../styles/timeline.module.css'
 
-export default function Timeline() {
-    return (
-        // <Layout>
-        //
-        // </Layout>
+export default function Timeline({ data }) {
 
-        <div>
-            <h1>
-                Timeline Title
-            </h1>
-            <p>
-                Timeline Text
-            </p>
+    // console.log(data.allStrapiTimeline.edges[0].node.articles)
+
+    const timelineTitle = data.allStrapiTimeline.edges[0].node.titel
+
+    const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map((article) =>
+        <div className={styles.article_preview_w} key={article.id}>
+            <h2>{article.titel}</h2>
+            <p>{article.preview}</p>
         </div>
     )
+
+    // console.log(articlePreviews)
+
+    const loadData = (category) => {
+        setTimeout(() => {
+            navigate(
+                "/",
+                {
+                    state: { category }
+                }
+            )
+        }, 300)
+
+    }
+
+    return (
+        <Layout loadData={loadData} category={data.allStrapiTimeline.distinct[0]}>
+
+            <h1>
+                {timelineTitle}
+            </h1>
+            {articlePreviews}
+        </Layout>
+    )
 }
+
+export const query = graphql `
+    query MyQuery($timeline: String) {
+        allStrapiTimeline(filter: {titel: {eq: $timeline}}) {
+            edges {
+                node {
+                    titel
+                    articles {
+                        id
+                        titel
+                        preview
+                    }
+                }
+            }
+            distinct(field: category___titel)
+        }
+    }
+`

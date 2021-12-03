@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { useState } from "react"
 import Burger from "./Burger"
 
@@ -23,9 +24,9 @@ export default function Top() {
 
   return (
     <header>
-      <a href="/">
+      <Link to="/" state={{category: "Bildung"}}>
         <img src="/logo.svg" alt="politiX" />
-      </a>
+      </Link>
       <div className="menu-ico">
           <Burger />
           <img src={src} alt="menu" style={{ width: "100%" }} onClick={burgerClick}/>

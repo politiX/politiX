@@ -7,13 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allStrapiTimeline {
                 edges {
                     node {
-                        id
                         titel
-                        articles {
-                            id
-                            titel
-                            preview
-                        }
                     }
                 }
             }

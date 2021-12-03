@@ -26,8 +26,13 @@ const GET_ALL_TIMELINES = gql`
   }
   `;
 
-export default function Home() {
+export default function Home({location}) {
     let categoryTimelines = "Bildung";
+
+    if (location.state !== null) {
+        categoryTimelines = location.state.category
+    }
+
     
     const { loading, error, data, refetch } = useQuery(GET_ALL_TIMELINES, {
         variables: { categoryTimelines: categoryTimelines }
@@ -46,11 +51,13 @@ export default function Home() {
         // console.log('here i am', data.timelines[0].titel)
     }
 
+
+
     return (
         <div>
-            <Layout loadData={loadData}>
+            <Layout loadData={loadData} category={categoryTimelines}>
                 <h1>Timelines</h1>
-                <Preview timelines={data.timelines}></Preview>
+                <Preview timelines={data.timelines} />
             </Layout>
         </div>
     );

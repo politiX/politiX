@@ -3,7 +3,7 @@ import {useState} from "react"
 import Swipe from "./Swipe";
 import {graphql, useStaticQuery} from "gatsby";
 
-export default function Nav({ loadData }) {
+export default function Nav({ loadData, category }) {
 
     // query category data
     const data = useStaticQuery(graphql`
@@ -23,12 +23,13 @@ export default function Nav({ loadData }) {
     const categoryData = [];
     const edges = data.allStrapiCategories.edges
 
-    for (let i = 0; i < edges.length; i++) {
-        if (i === 0) {
-            tempAct = edges[i].node.titel
+    for (let edge of edges) {
+        // console.log(edge.node.titel, category)
+        if (edge.node.titel === category) {
+            tempAct = edge.node.titel
 
         } else {
-            categoryData.push(edges[i].node.titel)
+            categoryData.push(edge.node.titel)
         }
     }
 
