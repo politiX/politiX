@@ -2,22 +2,35 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: Helvetica, Arial, SansSerif;
+    font-family: 'Segoe UI Regular' ,Helvetica, Arial, SansSerif;
     color: #060606;
 }
 
 html, body {
     height: 100%;
 }
-
 body {
-    background: #F5F5F5;
+    background-color: #D8D8D8
 }
-
 p {
+    font-family: 'Segoe UI Regular';
     font-size: 14px;
     line-height: 1.5em;
+    color: #7C7C7C;
 }
+h3{
+    font-family: 'Segoe UI Regular';
+    color: #7C7C7C;
+}
+h2{
+    font-family: 'Segoe UI Regular';
+    padding-bottom: 15px;
+}
+  p img {
+    margin: 20px -20px -20px -15px;
+    border-radius: 0px 0px 15px 15px;
+    width: 100%;
+    }
 
 /* layout & nav */
 .layout {
@@ -71,4 +84,10 @@ footer {
     margin: 0 auto;
     margin-top: 5%;
     font-size: 6px;
+}
+
+.preview{
+background-color: #fff;
+    border-radius: 15px;
+    padding: 15px
 }

@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---cache-dev-404-page-js",
     "path": "/dev-404-page/",
-    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/timelines/Bafög"},{"path":"/timelines/Klimakonferenz"},{"path":"/timelines/Anpassung der Urheberrechts an die Erfordernisse des digitalen Binnenmarktes"},{"path":"/timelines/Gesundheit"},{"path":"/404/"},{"path":"/404.html"},{"path":"/about/"},{"path":"/impressum/"},{"path":"/"},{"path":"/login/"},{"path":"/profile/"}]}},"pageContext":{}},
+    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/timelines/Bafög"},{"path":"/timelines/Klimakonferenz"},{"path":"/timelines/Urheberrechtsreform"},{"path":"/timelines/Gesundheit"},{"path":"/404/"},{"path":"/404.html"},{"path":"/about/"},{"path":"/impressum/"},{"path":"/"},{"path":"/login/"},{"path":"/profile/"}]}},"pageContext":{}},
     "staticQueryHashes": []}

@@ -5,9 +5,9 @@ export default function Preview({timelines}) {
     const timelinesRender = timelines.map((timeline) =>
         <Link to={"/timelines/" + timeline.titel}>
             <div key={timeline.id}>
-                <h2>{timeline.titel}</h2>
+                <h3>{timeline.titel}</h3>
                 <div>
-                    <h3>{timeline.articles[0].titel}</h3> 
+                    <h2>{timeline.articles[0].titel}</h2> 
                     <p>{timeline.articles[0].preview}</p>
                     <img src={timeline.preview_picture ? timeline.preview_picture.formats.thumbnail.url : ""} alt="" />
                 </div>
