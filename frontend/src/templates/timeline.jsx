@@ -31,6 +31,7 @@ export default function Timeline({ data }) {
     }
 
     return (
+        <div className={styles.timeline}>
         <Layout loadData={loadData} category={data.allStrapiTimeline.distinct[0]}>
 
             <h1>
@@ -38,6 +39,7 @@ export default function Timeline({ data }) {
             </h1>
             {articlePreviews}
         </Layout>
+        </div>
     )
 }
 

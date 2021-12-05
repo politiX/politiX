@@ -3,6 +3,16 @@
     flex-direction: column;
 }
 
+.timeline h1{
+    background-color: #F9991B;
+    margin: -20px -2.6% 20px -2.6%;
+    padding: 1% 2.5%;
+    color: white;
+    position: sticky;
+    top: 95px;
+    font-size: 1.3em;
+}
+
 .article_preview_w {
     background-color: white;
     border-radius: 15px;
