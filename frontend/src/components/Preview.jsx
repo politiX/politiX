@@ -8,7 +8,7 @@ export default function Preview({timelines}) {
         <Link to={"/timelines/" + timeline.titel}
               key={timeline.id}
         >
-            <div>
+            <div className={styles.preview}>
                 <h3>{timeline.titel}</h3>
                 <div>
                     <h2>{timeline.articles[0].titel}</h2> 
@@ -19,7 +19,7 @@ export default function Preview({timelines}) {
         </Link>
     )
     return (
-        <div className={styles.preview}>
+        <div>
             {timelinesRender}
         </div>
     );
