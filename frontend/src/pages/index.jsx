@@ -29,7 +29,7 @@ const GET_ALL_TIMELINES = gql`
 export default function Home({location}) {
     let categoryTimelines = "Bildung";
 
-    if (location.state !== null) {
+    if (location.state.category !== null) {
         categoryTimelines = location.state.category
     }
 
