@@ -13,7 +13,7 @@ export default function Preview({timelines}) {
                 <div>
                     <h2>{timeline.articles[0].titel}</h2> 
                     <p>{timeline.articles[0].preview}</p>
-                    <img src={timeline.preview_picture ? timeline.preview_picture.formats.thumbnail.url : ""} alt="" />
+                    <img src={timeline.preview_picture ? timeline.preview_picture.formats.medium.url : ""} alt="" />
                 </div>
             </div>
         </Link>
