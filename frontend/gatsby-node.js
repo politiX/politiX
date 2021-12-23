@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allStrapiTimeline {
                 edges {
                     node {
-                        titel
+                        title
                     }
                 }
             }
@@ -17,9 +17,9 @@ exports.createPages = async ({ graphql, actions }) => {
     data.allStrapiTimeline.edges.forEach(edge => {
         // console.log(node.title)
         actions.createPage({
-            path: '/timelines/' + edge.node.titel,
+            path: '/timelines/' + edge.node.title,
             component: path.resolve('./src/templates/timeline.jsx'),
-            context: {timeline: edge.node.titel}
+            context: {timeline: edge.node.title}
         })
     })
 

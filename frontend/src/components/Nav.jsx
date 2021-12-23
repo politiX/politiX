@@ -11,7 +11,7 @@ export default function Nav({ loadData, category }) {
         allStrapiCategories {
             edges {
                 node {
-                    titel
+                    title
                 }
             }
         }
@@ -24,12 +24,12 @@ export default function Nav({ loadData, category }) {
     const edges = data.allStrapiCategories.edges
 
     for (let edge of edges) {
-        // console.log(edge.node.titel, category)
-        if (edge.node.titel === category) {
-            tempAct = edge.node.titel
+        // console.log(edge.node.title, category)
+        if (edge.node.title === category) {
+            tempAct = edge.node.title
 
         } else {
-            categoryData.push(edge.node.titel)
+            categoryData.push(edge.node.title)
         }
     }
 

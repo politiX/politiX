@@ -11,14 +11,14 @@ import {
 
 const GET_ALL_TIMELINES = gql`
   query Timelines($categoryTimelines: String!) {
-    timelines(where: { category:{ titel: $categoryTimelines }}) {
+    timelines(where: { category:{ title: $categoryTimelines }}) {
           id
-          titel
+          title
           preview_picture {
             formats
           }
           articles(limit: 1, sort:"date:desc"){
-            titel
+            title
             preview
             date
           }
@@ -48,7 +48,7 @@ export default function Home({location}) {
 
         refetch({categoryTimelines: category})
 
-        // console.log('here i am', data.timelines[0].titel)
+        // console.log('here i am', data.timelines[0].title)
     }
 
 

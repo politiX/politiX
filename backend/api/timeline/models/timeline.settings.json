@@ -21,8 +21,8 @@
       "required": true
     },
     "articles": {
-      "collection": "article",
-      "via": "timeline"
+      "via": "timeline",
+      "collection": "article"
     },
     "category": {
       "via": "timelines",

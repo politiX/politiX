@@ -7,11 +7,11 @@ export default function Timeline({ data }) {
 
     // console.log(data.allStrapiTimeline.edges[0].node.articles)
 
-    const timelineTitle = data.allStrapiTimeline.edges[0].node.titel
+    const timelineTitle = data.allStrapiTimeline.edges[0].node.title
 
     const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map((article) =>
         <div className={styles.article_preview_w} key={article.id}>
-            <h2>{article.titel}</h2>
+            <h2>{article.title}</h2>
             <p>{article.preview}</p>
         </div>
     )
@@ -45,18 +45,18 @@ export default function Timeline({ data }) {
 
 export const query = graphql `
     query MyQuery($timeline: String) {
-        allStrapiTimeline(filter: {titel: {eq: $timeline}}) {
+        allStrapiTimeline(filter: {title: {eq: $timeline}}) {
             edges {
                 node {
-                    titel
+                    title
                     articles {
                         id
-                        titel
+                        title
                         preview
                     }
                 }
             }
-            distinct(field: category___titel)
+            distinct(field: category___title)
         }
     }
 `
