@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import * as styles from '../styles/timelinePreview.module.css';
 
 export default function Preview({timelines}) {
-    console.log(timelines)
+    /* console.log(timelines) */
     const timelinesRender = timelines.map((timeline) =>
         <Link to={"/timelines/" + timeline.title}
               key={timeline.id}

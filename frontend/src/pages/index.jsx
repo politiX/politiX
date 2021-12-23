@@ -1,4 +1,5 @@
 import React from "react";
+import { forceUpdate } from "react";
 import Layout from "../components/Layout";
 import Preview from "../components/Preview";
 import "../styles/global.css";
@@ -9,22 +10,38 @@ import {
     gql
 } from "@apollo/client";
 
-const GET_ALL_TIMELINES = gql`
+const GET_ALL_TIMELINES_WITH_CATEGORY = gql`
   query Timelines($categoryTimelines: String!) {
     timelines(where: { category:{ title: $categoryTimelines }}) {
-          id
+        id
+        title
+        preview_picture {
+          formats
+        }
+        articles(limit: 1, sort:"date:desc"){
           title
-          preview_picture {
-            formats
-          }
-          articles(limit: 1, sort:"date:desc"){
-            title
-            preview
-            date
-          }
+          preview
+          date
+        }
     }
-  }
-  `;
+  }`;
+
+const GET_ALL_TIMELINES = gql`
+  query Timelines{
+    timelines{
+        id
+        title
+        preview_picture {
+          formats
+        }
+        articles(limit: 1, sort:"date:desc"){
+          title
+          preview
+          date
+        }
+    }
+  }`;
+
 
 export default function Home({location}) {
     let categoryTimelines = "Bildung";
@@ -34,21 +51,20 @@ export default function Home({location}) {
     }
 
     
-    const { loading, error, data, refetch } = useQuery(GET_ALL_TIMELINES, {
+    let { loading, error, data, refetch } = useQuery(GET_ALL_TIMELINES_WITH_CATEGORY, {
         variables: { categoryTimelines: categoryTimelines }
     });
-
+    let { loading2, error2, data: dataW} = useQuery(GET_ALL_TIMELINES);
     if (loading) return null;
     if (error) console.log(error);
-    /* if (data) console.log(data) */
+    
 
     const loadData = (category) => {
-
-        categoryTimelines = category
-
-        refetch({categoryTimelines: category})
-
-        // console.log('here i am', data.timelines[0].title)
+        if(category == "Neuste"){
+          categoryTimelines = category;
+        } else {
+          refetch({categoryTimelines: category})
+        }
     }
 
 
@@ -57,7 +73,7 @@ export default function Home({location}) {
         <div>
             <Layout loadData={loadData} category={categoryTimelines}>
                 <h1>Timelines</h1>
-                <Preview timelines={data.timelines} />
+                <Preview timelines={categoryTimelines == "Neuste" ? dataW.timelines : data.timelines} />
             </Layout>
         </div>
     );

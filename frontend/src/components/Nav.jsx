@@ -20,7 +20,7 @@ export default function Nav({ loadData, category }) {
 
     // destructure category data
     let tempAct
-    const categoryData = [];
+    const categoryData = ["Neuste"];
     const edges = data.allStrapiCategories.edges
 
     for (let edge of edges) {
