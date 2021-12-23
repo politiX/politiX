@@ -15,8 +15,8 @@
       "type": "string"
     },
     "timeline": {
-      "model": "timeline",
-      "via": "tags"
+      "via": "tags",
+      "model": "timeline"
     }
   }
 }
