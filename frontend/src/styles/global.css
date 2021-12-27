@@ -32,6 +32,7 @@ h2{
 
 h1 {
     margin-bottom: 10px;
+    z-index: 9;
 }
 
 /* layout & nav */
@@ -57,6 +58,7 @@ header {
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .menu-ico {
@@ -81,6 +83,7 @@ nav {
 .content {
     padding: 0 2.5%;
     margin-top: 20px;
+    
 }
 footer {
     display: flex;
