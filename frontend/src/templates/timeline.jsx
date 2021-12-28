@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql, navigate } from "gatsby";
+import { Link } from "gatsby";
 import * as styles from "../styles/timeline.module.css";
 
 export default function Timeline({ data }) {
@@ -10,10 +11,12 @@ export default function Timeline({ data }) {
 
   const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
     (article) => (
+      <Link to={"/timelines/" + article.title} key={article.id}>
       <div className={styles.article_preview_w} key={article.id}>
         <h2>{article.title}</h2>
         <p>{article.preview}</p>
       </div>
+      </Link>
     )
   );
 
@@ -27,7 +30,9 @@ export default function Timeline({ data }) {
     }, 300);
   };
 
-window.onscroll = function () {triggerScroll()};
+  window.onscroll = function () {
+    triggerScroll();
+  };
 
   return (
     <div className={styles.timeline}>
@@ -41,17 +46,19 @@ window.onscroll = function () {triggerScroll()};
   );
 }
 
-function triggerScroll(){
+function triggerScroll() {
   let timelinePreview = document.getElementsByClassName(
     "timeline-module--article_preview_w--9k4FG"
   );
+  let minScroll = 20;
   for (let i = 0; i < timelinePreview.length; i++) {
-    // Hier sollte die ScrollHöhe der PreviewArticle erfasst werden
-    console.log(timelinePreview[i].scrollTop);
-    // console.log(window.scrollY);
+    let articlepreviewHeight = timelinePreview[i].clientHeight
+    console.log(window.scrollY);
+    if (window.scrollY > 20) {
+      console.log("jetzt");
+    }
   }
 }
-
 
 export const query = graphql`
   query MyQuery($timeline: String) {
