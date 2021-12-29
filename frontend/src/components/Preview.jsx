@@ -3,10 +3,11 @@ import { Link } from "gatsby";
 import * as styles from "../styles/timelinePreview.module.css";
 
 export default function Preview({ timelines }) {
-
+  if (typeof window !== `undefined`) {
   window.onscroll = function () {
     triggerScroll();
   };
+}
 
   const timelinesRender = timelines.map((timeline) => (
     <Link to={"/timelines/" + timeline.title} key={timeline.id}>
