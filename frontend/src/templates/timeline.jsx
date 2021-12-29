@@ -11,10 +11,9 @@ export default function Timeline({data}) {
 
     const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
         (article) => (
-            <Link to={"/timelines/" + article.title} key={article.id}>
+            <Link to={article.title} key={article.id}>
                 <div className={styles.article_preview_w} key={article.id} sign={article.id}>
                     <div className='dot' sign={article.id}>
-
                     </div>
                     <h2>{article.title}</h2>
                     <p>{article.preview}</p>
@@ -39,12 +38,12 @@ export default function Timeline({data}) {
     };
 
     function triggerScroll() {
-        let timelinePreview = document.querySelectorAll(
+        let timelineModule = document.querySelectorAll(
             ".timeline-module--article_preview_w--9k4FG"
         );
-        for (let i = 0; i < timelinePreview.length; i++) {
-            let triggerPoint = timelinePreview[i].offsetTop - window.scrollY
-            let sign = timelinePreview[i].getAttribute('sign')
+        for (let i = 0; i < timelineModule.length; i++) {
+            let triggerPoint = timelineModule[i].offsetTop - window.scrollY
+            let sign = timelineModule[i].getAttribute('sign')
             let dot = document.querySelector('.dot[sign="'+sign+'"]')
             if (triggerPoint < 160 ) {
                 dot.classList.add('active')
@@ -65,7 +64,6 @@ export default function Timeline({data}) {
         </div>
     );
 }
-
 
 
 export const query = graphql`

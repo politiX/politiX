@@ -26,21 +26,24 @@
 .preview p {
   padding: 15px 30px 20px 60px;
 }
-.preview .scrollball {
+:global .preview-scrollball {
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  background-color: #f9991b;
+  background-color: #D8D8D8;
   position: relative;
   left: 20px;
   top: 33px;
   float: left;
 }
-.preview .scrollbar {
-  background-color: #f9991b;
+:global .preview-scrollbar {
+  background-color: #D8D8D8;;
   height: 100%;
   width: 5px;
   float: left;
   position: absolute;
   left: 28px;
+}
+:global .active{
+  background-color: #f9991b;
 }

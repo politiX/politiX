@@ -56,7 +56,7 @@ export default function Home({location}) {
     return (
         <div>
             <Layout loadData={loadData} category={categoryTimelines}>
-                <h1>Timelines</h1>
+                {/* <h1>Timelines</h1> */}
                 <Preview timelines={data.timelines} />
             </Layout>
         </div>

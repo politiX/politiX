@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[564],{5412:function(e,t,l){l.r(t),l.d(t,{default:function(){return r}});var n=l(7294);function r(){return n.createElement("div",null,n.createElement("h1",null,"Timeline Title"),n.createElement("p",null,"Timeline Text"))}}}]);
-//# sourceMappingURL=component---src-templates-timeline-jsx-701b016d5594142cac8d.js.map
