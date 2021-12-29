@@ -67,8 +67,6 @@ export default function Timeline({data}) {
             }
 
 
-            // console.log(triggerPoint)
-            // console.log(triggerPointUpper)
             if (triggerPoint < 140) {
                 if (i !== 0) {
                     preDot.classList.remove('active')
