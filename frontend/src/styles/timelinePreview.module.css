@@ -35,6 +35,7 @@
   left: 20px;
   top: 33px;
   float: left;
+  transition: all 0.3s;
 }
 :global .preview-scrollbar {
   background-color: #D8D8D8;;
@@ -43,7 +44,16 @@
   float: left;
   position: absolute;
   left: 28px;
+  transition: all 0.3s;
 }
-:global .active{
+:global .preview-scrollball.active{
   background-color: #f9991b;
+  width: 31px;
+  height: 31px;
+  transform: translate(-5px, -5px);
+  transition: all 0.3s;
+}
+:global .preview-scrollbar.active{
+  background-color: #f9991b;
+  transition: all 0.3s;
 }

@@ -40,7 +40,7 @@ export default function Home({location}) {
 
     if (loading) return null;
     if (error) console.log(error);
-    /* if (data) console.log(data) */
+    if (data) console.log(data)
 
     const loadData = (category) => {
 

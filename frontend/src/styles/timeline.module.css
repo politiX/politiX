@@ -13,14 +13,55 @@
   font-size: 1.3em;
 }
 
-.article_preview_w {
+:global .pub {
+   float: right;
+   font-size: 0;
+ }
+
+:global .article_preview_w.active .pub {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+:global .article_preview_w {
   background-color: white;
   border-radius: 15px;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-  width: 87%;
+  width: 80%;
   float: right;
+  transition: all 0.3s;
+}
+
+:global .article_preview_w.active {
+  margin-bottom: 65px;
+  margin-top: 25px;
+  transition: all 0.3s;
+}
+
+:global .article_preview_w p{
+  font-size: 0;
+  transition: all 0.3s;
+}
+
+:global .article_preview_w.active p{
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+:global .article_preview_w h2{
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #7C7C7C;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+:global .article_preview_w.active h2{
+  font-size: 24px;
+  color: #060606;
+  transition: all 0.3s;
 }
 
 :global .dot {
@@ -31,7 +72,7 @@
   color: #f9991b;
   content: "-";
   position: absolute;
-  left: 2%;
+  left: 4%;
   transition: all 0.3s;
 }
 
@@ -43,23 +84,25 @@
 }
 
 .scrollbar {
-  position: absolute;
+  position: fixed;
   width: 1%;
-  left: 4%;
+  left: 6%;
   height: 120%;
   background: #f9991b;
   margin-top: -20%;
   z-index: 5;
 }
 
-.scrollball {
-  width: 2%;
-  height: 25%;
-  border-radius: 50%;
-  background-color: #f9991b;
-  position: fixed;
-  left: 5.5vw;
-}
+/*.scrollball {*/
+/*  width: 2%;*/
+/*  height: 25%;*/
+/*  border-radius: 50%;*/
+/*  background-color: #f9991b;*/
+/*  position: fixed;*/
+/*  left: 5.5vw;*/
+/*}*/
+
+
 
 @media only screen and (min-width: 1200px) {
     .scrollbar {
@@ -78,3 +121,5 @@
     left: 14%;
   }
 }
+
+

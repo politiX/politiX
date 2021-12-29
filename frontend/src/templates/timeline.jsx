@@ -10,15 +10,17 @@ export default function Timeline({data}) {
     const timelineTitle = data.allStrapiTimeline.edges[0].node.title;
 
     let str = 'active'
+
     const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
         (article) => (
             <Link to={"/timelines/" + article.title} key={article.id}>
-                <div className={styles.article_preview_w} key={article.id} sign={article.id}>
+                <div className={'article_preview_w ' + str} key={article.id} sign={article.id}>
                     <div className={'dot ' + str} sign={article.id}>
                         {str = ''}
                     </div>
                     <h2>{article.title}</h2>
-                    <p>{article.preview}</p>
+                    <p>{article.preview }</p>
+                    <p className='pub'>{article.published_at}</p>
                 </div>
 
             </Link>
@@ -35,6 +37,7 @@ export default function Timeline({data}) {
         }, 300);
     };
 
+
     if (typeof window !== undefined) {
         window.onscroll = function () {
             triggerScroll();
@@ -43,7 +46,7 @@ export default function Timeline({data}) {
 
     function triggerScroll() {
         let timelinePreview = document.querySelectorAll(
-            ".timeline-module--article_preview_w--9k4FG"
+            ".article_preview_w"
         );
         for (let i = 0; i < timelinePreview.length; i++) {
             let triggerPoint
@@ -63,7 +66,7 @@ export default function Timeline({data}) {
 
             let scroll
             if (typeof window !== undefined) {
-                scroll = document.body.scrollTop
+                scroll = window.pageYOffset
             }
 
 
@@ -72,17 +75,38 @@ export default function Timeline({data}) {
                     preDot.classList.remove('active')
                 }
                 dot.classList.add('active')
-
             } else if (dot.classList.contains('active') && i !== 0) {
                 dot.classList.remove('active')
             }
+
+            timelinePreview[i].classList.remove('active')
 
             if (scroll < 15) {
                 let sign = timelinePreview[0].getAttribute('sign')
                 let dot = document.querySelector('.dot[sign="' + sign + '"]')
                 dot.classList.add('active')
             }
+
+
         }
+
+        let els = document.querySelectorAll('.dot.active')
+        if (els.length > 1) {
+            els[1].parentElement.classList.add('active')
+        } else {
+            els[0].parentElement.classList.add('active')
+        }
+    }
+
+    let height
+    if (document.readyStat) {
+        height = document.body.clientHeight - document.querySelector('.header').clientHeight - document.querySelector('footer').clientHeight - 10 + 'px'
+    } else {
+        height = 600 + 'px'
+    }
+    let windowHeight = {
+        height: height,
+        display: 'block'
     }
 
     return (
@@ -93,6 +117,8 @@ export default function Timeline({data}) {
                 {/* <div className={styles.scrollball}></div> */}
                 {articlePreviews}
             </Layout>
+
+            <div style={windowHeight}></div>
         </div>
     );
 }
@@ -108,6 +134,7 @@ export const query = graphql`
             id
             title
             preview
+            published_at(fromNow: false, formatString: "DD.MMMM.YYYY")
           }
         }
       }

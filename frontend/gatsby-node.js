@@ -3,7 +3,7 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions }) => {
 
     const { data } = await graphql (`
-        query MyQuery {
+        query nodeQuery {
             allStrapiTimeline {
                 edges {
                     node {
@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Build article pages
     data.allStrapiArticle.edges.forEach(edge => {
         actions.createPage({
-            path: '/articles/' + edge.node.title,
+            path: '/timelines/' + edge.node.timeline.title + '/articles/' + edge.node.title,
             component: path.resolve('./src/templates/article.jsx'),
             context: {article: edge.node.title}
         })
