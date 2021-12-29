@@ -9,11 +9,13 @@ export default function Timeline({data}) {
 
     const timelineTitle = data.allStrapiTimeline.edges[0].node.title;
 
+    let str = 'active'
     const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
         (article) => (
-            <Link to={article.title} key={article.id}>
+            <Link to={"/timelines/" + article.title} key={article.id}>
                 <div className={styles.article_preview_w} key={article.id} sign={article.id}>
-                    <div className='dot' sign={article.id}>
+                    <div className={'dot ' + str} sign={article.id}>
+                        {str = ''}
                     </div>
                     <h2>{article.title}</h2>
                     <p>{article.preview}</p>
@@ -33,22 +35,54 @@ export default function Timeline({data}) {
         }, 300);
     };
 
-    window.onscroll = function () {
-        triggerScroll();
-    };
+    if (typeof window !== undefined) {
+        window.onscroll = function () {
+            triggerScroll();
+        };
+    }
 
     function triggerScroll() {
-        let timelineModule = document.querySelectorAll(
+        let timelinePreview = document.querySelectorAll(
             ".timeline-module--article_preview_w--9k4FG"
         );
-        for (let i = 0; i < timelineModule.length; i++) {
-            let triggerPoint = timelineModule[i].offsetTop - window.scrollY
-            let sign = timelineModule[i].getAttribute('sign')
-            let dot = document.querySelector('.dot[sign="'+sign+'"]')
-            if (triggerPoint < 160 ) {
+        for (let i = 0; i < timelinePreview.length; i++) {
+            let triggerPoint
+            let sign = timelinePreview[i].getAttribute('sign')
+            let dot = document.querySelector('.dot[sign="' + sign + '"]')
+            let prevSign
+            let preDot
+            if (i === 0) {
+                triggerPoint = timelinePreview[i].offsetTop - window.scrollY
+                prevSign = sign
+                preDot = dot
+            } else {
+                triggerPoint = timelinePreview[i - 1].offsetTop - window.scrollY
+                prevSign = timelinePreview[i - 1].getAttribute('sign')
+                preDot = document.querySelector('.dot[sign="' + prevSign + '"]')
+            }
+
+            let scroll
+            if (typeof window !== undefined) {
+                scroll = document.body.scrollTop
+            }
+
+
+            // console.log(triggerPoint)
+            // console.log(triggerPointUpper)
+            if (triggerPoint < 140) {
+                if (i !== 0) {
+                    preDot.classList.remove('active')
+                }
                 dot.classList.add('active')
-            } else if (dot.classList.contains('active')) {
+
+            } else if (dot.classList.contains('active') && i !== 0) {
                 dot.classList.remove('active')
+            }
+
+            if (scroll < 15) {
+                let sign = timelinePreview[0].getAttribute('sign')
+                let dot = document.querySelector('.dot[sign="' + sign + '"]')
+                dot.classList.add('active')
             }
         }
     }

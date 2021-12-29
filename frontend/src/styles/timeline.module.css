@@ -49,7 +49,7 @@
 }
 
 .scrollbar {
-    position: absolute;
+    position: fixed;
     width: 1vw;
     left: 6vw;
     height: 120%;
