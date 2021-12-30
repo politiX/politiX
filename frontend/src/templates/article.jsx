@@ -2,27 +2,52 @@ import React from "react";
 import Layout from "../components/Layout";
 import {graphql, navigate} from "gatsby";
 import {Link} from "gatsby";
-import * as styles from "../styles/timeline.module.css";
+import * as styles from "../styles/article.module.css";
 
-export default function Article({data}) {
-    console.log(data)
+export default function Article({data, location}) {
+    console.log(data.allStrapiArticle.edges[0].node.micro_article_container)
+    console.log(location.state.category)
 
-    // const timelineTitle = data.allStrapiTimeline.edges[0].node.title;
+    const articleTitle = data.allStrapiArticle.edges[0].node.title;
+    const articleDate = data.allStrapiArticle.edges[0].node.published_at;
 
-    // const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
-    //     (article) => (
-    //         <Link to={"/timelines/" + article.title} key={article.id}>
-    //             <div className={styles.article_preview_w} key={article.id} sign={article.id}>
-    //                 <div className='dot' sign={article.id}>
-    //
-    //                 </div>
-    //                 <h2>{article.title}</h2>
-    //                 <p>{article.preview}</p>
-    //             </div>
-    //
-    //         </Link>
-    //     )
-    // );
+    let direction = 'right'
+    let end
+    const indicator = function (i) {
+        if ((i % 3) === 0) {
+            if (direction === 'right') {
+                direction = 'left'
+            } else {
+                direction = 'right'
+            }
+        }
+
+        if ((i+1)%3 === 0) {
+            end = 'end'
+        } else {
+            end = ''
+        }
+
+        return direction
+    }
+
+    const articleDetail = data.allStrapiArticle.edges[0].node.micro_article_container.map(
+        (article, index) => (
+            <div className={'micro_w ' + indicator(index)} key={article.id}>
+                <div className='img_w'>
+                    <img src={
+                        article.image
+                            ? article.image.url
+                            : ""
+                    }
+                         alt=""/>
+                    <div className={'imgStick ' + end}></div>
+                </div>
+                <p>{article.text}</p>
+            </div>
+
+        )
+    );
 
     // console.log(articlePreviews)
 
@@ -34,35 +59,18 @@ export default function Article({data}) {
         }, 300);
     };
 
-    // window.onscroll = function () {
-    //     triggerScroll();
-    // };
-
-    // function triggerScroll() {
-    //     let timelinePreview = document.querySelectorAll(
-    //         ".timeline-module--article_preview_w--9k4FG"
-    //     );
-    //     for (let i = 0; i < timelinePreview.length; i++) {
-    //         let triggerPoint = timelinePreview[i].offsetTop - window.scrollY
-    //         let sign = timelinePreview[i].getAttribute('sign')
-    //         let dot = document.querySelector('.dot[sign="'+sign+'"]')
-    //         if (triggerPoint < 160 ) {
-    //             dot.classList.add('active')
-    //         } else if (dot.classList.contains('active')) {
-    //             dot.classList.remove('active')
-    //         }
-    //     }
-    // }
-
     return (
         <div className={styles.timeline}>
-            <Layout loadData={loadData} category=''>
-                <h1>Article Placeholder</h1>
+            <Layout loadData={loadData} category={location.state.category}>
+                <h1 className={styles.topBar}>{articleTitle}</h1>
+                <div className={styles.art_w}>
+                    {articleDetail}
+                    <p className={styles.date}>{articleDate}</p>
+                </div>
             </Layout>
         </div>
     );
 }
-
 
 
 export const query = graphql`
@@ -71,7 +79,7 @@ query MyQuery2($article: String) {
         edges {
             node {
                 id
-                published_at
+                published_at(fromNow: false, formatString: "DD.MMMM.YYYY")
                 title
                 micro_article_container
             }

@@ -13,7 +13,7 @@ export default function Timeline({data}) {
 
     const articlePreviews = data.allStrapiTimeline.edges[0].node.articles.map(
         (article) => (
-            <Link to={"/timelines/" + article.title} key={article.id}>
+            <Link to={"/timelines/" + timelineTitle + '/articles/' + article.title} key={article.id} state={{category: data.allStrapiTimeline.distinct[0]}}>
                 <div className={'article_preview_w ' + str} key={article.id} sign={article.id}>
                     <div className={'dot ' + str} sign={article.id}>
                         {str = ''}
@@ -70,7 +70,7 @@ export default function Timeline({data}) {
             }
 
 
-            if (triggerPoint < 140) {
+            if (triggerPoint < 120) {
                 if (i !== 0) {
                     preDot.classList.remove('active')
                 }
@@ -91,11 +91,14 @@ export default function Timeline({data}) {
         }
 
         let els = document.querySelectorAll('.dot.active')
-        if (els.length > 1) {
-            els[1].parentElement.classList.add('active')
-        } else {
-            els[0].parentElement.classList.add('active')
+        if (els.length > 0) {
+            if (els.length > 1) {
+                els[1].parentElement.classList.add('active')
+            } else {
+                els[0].parentElement.classList.add('active')
+            }
         }
+
     }
 
     let height

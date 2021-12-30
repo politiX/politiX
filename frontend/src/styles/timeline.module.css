@@ -5,12 +5,13 @@
 
 .timeline h1 {
   background-color: #f9991b;
-  margin: -20px -2.6% 20px -2.6%;
-  padding: 1% 2.5%;
+  margin-left: -2.5%;
+  padding: 3% 2.5%;
+  width: 95%;
   color: white;
-  position: sticky;
+  position: fixed;
   top: 95px;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 :global .pub {

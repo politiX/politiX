@@ -82,12 +82,12 @@ nav {
 
 .content {
     padding: 0 2.5%;
-    margin-top: 20px;
+    margin-top: 40px;
+    overflow-x: hidden;
     
 }
 footer {
     display: flex;
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 2.5% auto;
     font-size: 6px;
 }
