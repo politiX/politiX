@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Dummy Timeline 1",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Dummy Timeline 1","articles":[{"id":"61ccb04f71e22c0016932de1","title":"Dummy Article 1","preview":"Dummy Article 1"}]}}],"distinct":["Innenpolitik"]}},"pageContext":{"timeline":"Dummy Timeline 1"}},
-    "staticQueryHashes": ["3985992580"]}
