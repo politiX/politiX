@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-article-jsx",
-    "path": "/timelines/Klimakonferenz/articles/Kolationsvertrag -Bafög",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61a395243f3a41001613b633","published_at":"28.November.2021","title":"Kolationsvertrag -Bafög","micro_article_container":[]}}]}},"pageContext":{"article":"Kolationsvertrag -Bafög"}},
-    "staticQueryHashes": ["3985992580"]}

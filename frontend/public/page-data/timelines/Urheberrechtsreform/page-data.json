@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Urheberrechtsreform",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Urheberrechtsreform","articles":[{"id":"61a67b3e951fc700166bc356","title":"Erste Lesung in Bundestag","preview":"Am Freitag fand im Bundestag die erste Lesung zur Anpassung des Urheberrechtes an die Erfordernisse des digitalen Binnenmarktes statt. Dabei wurde der Gesetzesentwurf behandelt und von den Fraktionen der AfD, der Linken und der FDP Änderungsanträge diesbezüglich gestellt. ","published_at":"01.December.2021"}]}}],"distinct":["Bildung"]}},"pageContext":{"timeline":"Urheberrechtsreform"}},
-    "staticQueryHashes": ["3985992580"]}

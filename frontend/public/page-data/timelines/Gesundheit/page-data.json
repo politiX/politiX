@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Gesundheit",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Gesundheit","articles":[{"id":"61ccab6271e22c0016932dde","title":"Dummy Article","preview":"lorem","published_at":"29.December.2021"}]}}],"distinct":["Gesundheit"]}},"pageContext":{"timeline":"Gesundheit"}},
-    "staticQueryHashes": ["3985992580"]}

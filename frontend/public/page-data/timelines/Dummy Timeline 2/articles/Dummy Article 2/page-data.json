@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-article-jsx",
-    "path": "/timelines/Dummy Timeline 2/articles/Dummy Article 2",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccb08071e22c0016932de2","published_at":"29.December.2021","title":"Dummy Article 2","micro_article_container":[]}}]}},"pageContext":{"article":"Dummy Article 2"}},
-    "staticQueryHashes": ["3985992580"]}
