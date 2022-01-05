@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Klimakonferenz",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"titel":"Klimakonferenz","articles":[{"id":"61a6018da1fa51001667ef95","titel":"Die erste Weltklimakonferenz","preview":"Das Bestreben einiger besorgter Wissenschaftler führte zur ersten Weltklimakonferenz und brachte den Anstoß für ein Weltklimaprogramm."},{"id":"61a60261a1fa51001667efae","titel":"Die Gründung des Pariser Klimaabkommens","preview":"Das Pariser Klimaabkommen ist ein völkerrechtlicher Vertrag, den 195 Vertragsparteien mit dem Ziel des Klimaschutzes abgeschlossen hatten. "}]}}],"distinct":["Umwelt"]}},"pageContext":{"timeline":"Klimakonferenz"}},
-    "staticQueryHashes": ["1515993576"]}

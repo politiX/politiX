@@ -57,7 +57,7 @@ export default function Home({location}) {
     let { loading2, error2, data: dataW} = useQuery(GET_ALL_TIMELINES);
     if (loading) return null;
     if (error) console.log(error);
-    
+    if (data) console.log(data)
 
     const loadData = (category) => {
         if(category == "Neuste"){
@@ -72,8 +72,8 @@ export default function Home({location}) {
     return (
         <div>
             <Layout loadData={loadData} category={categoryTimelines}>
-                <h1>Timelines</h1>
-                <Preview timelines={categoryTimelines == "Neuste" ? dataW.timelines : data.timelines} />
+                {/* <h1>Timelines</h1> */}
+                <Preview timelines={data.timelines} />
             </Layout>
         </div>
     );
