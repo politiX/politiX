@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Urheberrechtsreform",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"titel":"Urheberrechtsreform","articles":[{"id":"61a64373b9b6350016f1aacf","titel":"Gesetzesentwruf der Bundesregierung","preview":"Die Bundesregierung will das Urheberrecht in Deutschland modifizieren. Dazu wurde ein Gesetzesentwurf zur Anpassung des Urheberrechts im digitalen Binnenmarkt veröffentlicht. Schwerpunkt des Entwurfes liegt bei der Bestimmung der Verantwortlichkeit bei der Veröffentlichung von urheberrechtlich geschützten Werken. "},{"id":"61a67b3e951fc700166bc356","titel":"Erste Lesung in Bundestag","preview":"Am Freitag fand im Bundestag die erste Lesung zur Anpassung des Urheberrechtes an die Erfordernisse des digitalen Binnenmarktes statt. Dabei wurde der Gesetzesentwurf behandelt und von den Fraktionen der AfD, der Linken und der FDP Änderungsanträge diesbezüglich gestellt. "}]}}],"distinct":["Bildung"]}},"pageContext":{"timeline":"Urheberrechtsreform"}},
-    "staticQueryHashes": ["1515993576"]}
