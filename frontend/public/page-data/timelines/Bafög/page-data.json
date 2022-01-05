@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-timeline-jsx",
+    "path": "/timelines/Bafög",
+    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Bafög","articles":[{"id":"61ba0476be5a6500168930a3","title":"Aufenthaltsverfestigung für Flüchtlinge","preview":"Ein Asylberechtigter hat nach einer bestimmten Zeit eine Aufenthaltsverfestigung zu beantragen. Dafür muss er bestimmte Pflichten erfüllen.","published_at":"29.December.2021"}]}}],"distinct":["Bildung"]}},"pageContext":{"timeline":"Bafög"}},
+    "staticQueryHashes": ["3985992580"]}

@@ -79,9 +79,9 @@ query MyQuery2($article: String) {
         edges {
             node {
                 id
+                micro_article_container
                 published_at(fromNow: false, formatString: "DD.MMMM.YYYY")
                 title
-                micro_article_container
             }
         }
     }
