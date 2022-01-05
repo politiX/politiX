@@ -1,59 +1,14 @@
-.preview {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 20px;
-  /* padding: 5% 1% 1% 5%; */
-  height: 100%;
-  position: relative;
+.preview{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-bottom: 20px;
 }
 .preview img {
-  /* margin: 20px -20px -20px 0px; */
-  border-radius: 0px 0px 15px 15px;
-  width: 100%;
-  position: relative;
-  top: 5px;
+    margin: 20px -20px -20px 0px;
+    border-radius: 0px 0px 15px 15px;
+    width: 100%;
 }
-.preview h2 {
-  padding: 30px 0px 0px 60px;
-  /*   padding: 15px 15px 0px 15px; */
-}
-.preview h3 {
-  position: relative;
-  top: 30px;
-  padding: 0px 0px 10px 60px;
-}
-.preview p {
-  padding: 15px 30px 20px 60px;
-}
-:global .preview-scrollball {
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background-color: #D8D8D8;
-  position: relative;
-  left: 20px;
-  top: 33px;
-  float: left;
-  transition: all 0.3s;
-}
-:global .preview-scrollbar {
-  background-color: #D8D8D8;;
-  height: 100%;
-  width: 5px;
-  float: left;
-  position: absolute;
-  left: 28px;
-  transition: all 0.3s;
-}
-:global .preview-scrollball.active{
-  background-color: #f9991b;
-  width: 31px;
-  height: 31px;
-  transform: translate(-5px, -5px);
-  transition: all 0.3s;
-}
-:global .preview-scrollbar.active{
-  background-color: #f9991b;
-  transition: all 0.3s;
+.preview h2,.preview h3,.preview p{
+    padding: 15px 15px 0px 15px;
 }

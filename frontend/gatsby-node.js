@@ -3,7 +3,7 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions }) => {
 
     const { data } = await graphql (`
-        query nodeQuery {
+        query MyQuery {
             allStrapiTimeline {
                 edges {
                     node {
@@ -11,21 +11,11 @@ exports.createPages = async ({ graphql, actions }) => {
                     }
                 }
             }
-            allStrapiArticle {
-                edges {
-                    node {
-                        title
-                        timeline {
-                            title
-                        }
-                    }
-                }
-            }
         }
     `)
 
-    // Build timeline pages
     data.allStrapiTimeline.edges.forEach(edge => {
+        // console.log(node.title)
         actions.createPage({
             path: '/timelines/' + edge.node.title,
             component: path.resolve('./src/templates/timeline.jsx'),
@@ -33,13 +23,4 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
-
-    // Build article pages
-    data.allStrapiArticle.edges.forEach(edge => {
-        actions.createPage({
-            path: '/timelines/' + edge.node.timeline.title + '/articles/' + edge.node.title,
-            component: path.resolve('./src/templates/article.jsx'),
-            context: {article: edge.node.title}
-        })
-    })
 }
