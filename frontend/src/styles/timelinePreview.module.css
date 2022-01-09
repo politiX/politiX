@@ -1,3 +1,9 @@
+.previewContainer{
+  position: relative;
+  margin-top: 1px;
+}
+
+
 .preview {
   background-color: #fff;
   border-radius: 15px;
