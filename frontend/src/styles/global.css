@@ -32,8 +32,10 @@ h2 {
 }
 
 h1 {
+  font-family: "Segoe UI Regular";
   margin-bottom: 10px;
   z-index: 9;
+  float: left;
 }
 
 /* layout & nav */
@@ -83,7 +85,6 @@ nav {
 
 .content {
   padding: 0 2.5%;
-  margin-top: 40px;
   overflow-x: hidden;
 }
 footer {

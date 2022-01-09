@@ -6,12 +6,12 @@
 .timeline h1 {
   background-color: #f9991b;
   margin-left: -2.5%;
-  padding: 3% 2.5%;
-  width: 95%;
+  padding: 16px 25px;
   color: white;
   position: fixed;
   top: 95px;
   font-size: 1.1em;
+  width: 100%;
 }
 
 :global .pub {
@@ -94,6 +94,40 @@
   z-index: 5;
 }
 
+.timelineBody{
+  padding-top: 80px;
+}
+
+.topBar{
+  z-index: 9;
+  position: fixed;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.closeArticle {
+  position: absolute;
+  right: 50px;
+  width: 25px;
+  height: 25px;
+  top: 21px;
+  z-index: 10;
+}
+.closeArticle:before, .closeArticle:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #fff;
+  }
+  .closeArticle:before {
+    transform: rotate(45deg);
+  }
+  .closeArticle:after {
+    transform: rotate(-45deg);
+  }
+  
 /*.scrollball {*/
 /*  width: 2%;*/
 /*  height: 25%;*/

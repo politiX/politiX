@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-timeline-jsx",
+    "path": "/timelines/Ablauf eines Asylverfahrens in Deutschland",
+    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Ablauf eines Asylverfahrens in Deutschland","articles":[{"id":"61b9f9efbe5a65001689306a","title":"Asylantrag Schritt für Schritt","preview":"Ein Asylantrag kann ganz schön kompliziert werden. Wir versuchen euch diesen Schritt für Schritt so simple wie möglich zu erklären.","published_at":"29.December.2021"},{"id":"61b9fbf3be5a650016893082","title":"Nach dem Asylantrag","preview":"Nach einem positiv beendeten Asylantrag warten Pflichten und Rechte auf die Asylberechtigten. ","published_at":"29.December.2021"},{"id":"61ba0476be5a6500168930a3","title":"Aufenthaltsverfestigung für Flüchtlinge","preview":"Ein Asylberechtigter hat nach einer bestimmten Zeit eine Aufenthaltsverfestigung zu beantragen. Dafür muss er bestimmte Pflichten erfüllen.","published_at":"29.December.2021"}]}}],"distinct":["Innenpolitik"]}},"pageContext":{"timeline":"Ablauf eines Asylverfahrens in Deutschland"}},
+    "staticQueryHashes": ["3985992580"]}

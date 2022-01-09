@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-timeline-jsx",
+    "path": "/timelines/Bafög",
+    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Bafög","articles":[{"id":"61a395243f3a41001613b633","title":"Kolationsvertrag -Bafög","preview":"alösfksajdföaskddfkjlösadföksadfösafdas","published_at":"28.November.2021"}]}}],"distinct":["Bildung"]}},"pageContext":{"timeline":"Bafög"}},
+    "staticQueryHashes": ["3985992580"]}
