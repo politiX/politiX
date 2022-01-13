@@ -10,7 +10,7 @@ export default function Article({ data, location }) {
   // console.log(location.state.category);
 
   const articleTitle = data.allStrapiArticle.edges[0].node.title;
-  const articleDate = data.allStrapiArticle.edges[0].node.published_at;
+  const articleDate = data.allStrapiArticle.edges[0].node.date;
 
   let direction = "right";
   let end;
@@ -86,9 +86,9 @@ export default function Article({ data, location }) {
         <div className={styles.topBar}>
           <h1>{articleTitle}</h1>
           {/* Hier muss noch der Link gebaut werden um zurück zur betreffenden Timeline zu kommen */}
-          {/* <Link to={timeline.title} key={timeline.id}> */}
+         {/* <Link to={navigate(-1)}> */}
           <div className={styles.closeArticle}></div>
-          {/* </Link> */}
+        {/* </Link>  */}
         </div>
         <div className={styles.sideBar}></div>
         <div className={styles.art_w}>
@@ -107,7 +107,7 @@ export const query = graphql`
         node {
           id
           micro_article_container
-          published_at(fromNow: false, formatString: "DD.MMMM.YYYY")
+          date(fromNow: false, formatString: "DD.MM.YYYY")
           title
         }
       }

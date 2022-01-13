@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-jsx",
     "path": "/timelines/Klimakonferenz/articles/Klimakonferenz Glasgow ",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_6191714c40670c00167d070e","micro_article_container":[{"text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores ","image":null,"id":"6191714c40670c00167d070f","strapi_component":"timeline.micro-article"}],"published_at":"14.November.2021","title":"Klimakonferenz Glasgow "}}]}},"pageContext":{"article":"Klimakonferenz Glasgow "}},
+    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_6191714c40670c00167d070e","micro_article_container":[{"text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores ","image":null,"id":"6191714c40670c00167d070f","strapi_component":"timeline.micro-article"}],"date":"31.10.2021","title":"Klimakonferenz Glasgow "}}]}},"pageContext":{"article":"Klimakonferenz Glasgow "}},
     "staticQueryHashes": ["3985992580"]}

@@ -28,7 +28,7 @@ export default function Timeline({ data }) {
           </div>
           <h2>{article.title}</h2>
           <p>{article.preview}</p>
-          <p className="pub">{article.published_at}</p>
+          <p className="pub">{article.date}</p>
         </div>
       </Link>
     )
@@ -146,7 +146,7 @@ export const query = graphql`
             id
             title
             preview
-            published_at(fromNow: false, formatString: "DD.MMMM.YYYY")
+            date(fromNow: false, formatString: "DD.MM.YYYY")
           }
         }
       }

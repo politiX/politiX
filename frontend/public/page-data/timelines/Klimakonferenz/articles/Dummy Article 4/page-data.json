@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-jsx",
     "path": "/timelines/Klimakonferenz/articles/Dummy Article 4",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccc66a89442300160c930c","micro_article_container":[],"published_at":"29.December.2021","title":"Dummy Article 4"}}]}},"pageContext":{"article":"Dummy Article 4"}},
+    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccc66a89442300160c930c","micro_article_container":[],"date":"29.12.2021","title":"Dummy Article 4"}}]}},"pageContext":{"article":"Dummy Article 4"}},
     "staticQueryHashes": ["3985992580"]}
