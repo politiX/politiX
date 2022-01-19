@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-jsx",
     "path": "/timelines/Gesundheit/articles/Dummy Article",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccab6271e22c0016932dde","micro_article_container":[],"published_at":"29.December.2021","title":"Dummy Article"}}]}},"pageContext":{"article":"Dummy Article"}},
+    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccab6271e22c0016932dde","micro_article_container":[],"date":"29.12.2021","title":"Dummy Article"}}]}},"pageContext":{"article":"Dummy Article"}},
     "staticQueryHashes": ["3985992580"]}
