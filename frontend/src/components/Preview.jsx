@@ -59,7 +59,7 @@ export default function Preview({ timelines }) {
 
   return (
     <div className={styles.previewContainer}>
-      <div>{timelinesRender}</div>
+      {timelinesRender}
     </div>
   );
 }

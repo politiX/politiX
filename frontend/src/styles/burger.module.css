@@ -20,7 +20,7 @@
 .ww {
     position: absolute;
     width: 120px;
-    height: 140px;
+    height: 0;
     top: 33px;
     right: -5px;
     display: flex;

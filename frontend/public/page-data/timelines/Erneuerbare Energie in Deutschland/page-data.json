@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-timeline-jsx",
+    "path": "/timelines/Erneuerbare Energie in Deutschland",
+    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Erneuerbare Energie in Deutschland","articles":[{"id":"61d563c9b8f2fa0016502bce","title":"Aktueller Stand der Erneuerbare Energie in Deutschland","preview":"Die Energieversorgung in Deutschland soll mehr und mehr klimaverträglicher werden und uns gleichzeitig unabhängiger vom Import der fossilen Brenn-, Kraft- und Heizstoffe machen.","date":"01.01.2020"},{"id":"61d56ce0b8f2fa0016502bdf","title":"Erneuerbare-Energien-Gesetz 2021","preview":"Die Energieversorgung in Deutschland soll mehr und mehr klimaverträglicher werden. Dafür trat am 01.01.2020 ein neue Gesetzt in Kraft.","date":"01.01.2021"}]}}],"distinct":["Umwelt"]}},"pageContext":{"timeline":"Erneuerbare Energie in Deutschland"}},
+    "staticQueryHashes": ["3985992580"]}

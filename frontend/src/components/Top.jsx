@@ -10,13 +10,18 @@ export default function Top() {
     const burgerClick = (e) => {
         let state = e.target.previousSibling.childNodes[0].classList
         let obj = e.target.previousSibling.childNodes[0]
+        let w = e.target.previousSibling
+
+        console.log(w)
 
         if (state.contains('active') === false) {
             state.add('active')
+            w.style.width = '140px';
             obj.style.top = '-5px'
             setSrc('/close.svg')
         } else {
             state.remove('active')
+            w.style.width = '0';
             obj.style.top = '-140px'
             setSrc('/menu.svg')
         }

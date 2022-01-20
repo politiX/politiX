@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-article-jsx",
+    "path": "/timelines/Bafög/articles/Kolationsvertrag-Bafög",
+    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61a395243f3a41001613b633","micro_article_container":[],"date":"25.11.2021","title":"Kolationsvertrag-Bafög"},"next":null}]}},"pageContext":{"article":"Kolationsvertrag-Bafög","next":{"title":"Die erste Weltklimakonferenz"},"prev":{"title":"Klimakonferenz Glasgow "},"route":"/timelines/Bafög/articles/","routeBack":"/timelines/Bafög"}},
+    "staticQueryHashes": ["3985992580"]}

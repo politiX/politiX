@@ -4,14 +4,12 @@
 }
 
 .timeline h1 {
-  background-color: #f9991b;
   margin-left: -2.5%;
   padding: 16px 25px;
+  z-index: 3;
   color: white;
-  position: fixed;
-  top: 95px;
   font-size: 1.1em;
-  width: 100%;
+  margin-right: auto;
 }
 
 :global .pub {
@@ -91,7 +89,6 @@
   height: 120%;
   background: #f9991b;
   margin-top: -20%;
-  z-index: 5;
 }
 
 .timelineBody{
@@ -99,34 +96,22 @@
 }
 
 .topBar{
-  z-index: 9;
+  background-color: #f9991b;
+  z-index: 1;
   position: fixed;
   max-width: 1200px;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: -2.5%;
 }
 
-.closeArticle {
-  position: absolute;
-  right: 50px;
-  width: 25px;
-  height: 25px;
-  top: 21px;
-  z-index: 10;
+.topBar img:last-child {
+  margin-right: 20px;
+  margin-left: 10px;
+  max-width: 25px;
 }
-.closeArticle:before, .closeArticle:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 20px;
-    width: 2px;
-    background-color: #fff;
-  }
-  .closeArticle:before {
-    transform: rotate(45deg);
-  }
-  .closeArticle:after {
-    transform: rotate(-45deg);
-  }
   
 /*.scrollball {*/
 /*  width: 2%;*/

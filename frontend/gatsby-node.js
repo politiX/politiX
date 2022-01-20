@@ -19,6 +19,12 @@ exports.createPages = async ({ graphql, actions }) => {
                             title
                         }
                     }
+                    next {
+                        title
+                    }
+                    previous {
+                        title
+                    }
                 }
             }
         }
@@ -39,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
         actions.createPage({
             path: '/timelines/' + edge.node.timeline.title + '/articles/' + edge.node.title,
             component: path.resolve('./src/templates/article.jsx'),
-            context: {article: edge.node.title}
+            context: {article: edge.node.title, next: edge.next, prev: edge.previous, route: '/timelines/' + edge.node.timeline.title + '/articles/', routeBack: '/timelines/' + edge.node.timeline.title}
         })
     })
 }
