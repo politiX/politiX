@@ -93,7 +93,12 @@ export default function Article({data, location, pageContext}) {
                     <h1>{articleTitle}</h1>
                     {/* Hier muss noch der Link gebaut werden um zurück zur betreffenden Timeline zu kommen */}
                     {/* <Link to={navigate(-1)}> */}
-                    <img src="/up.svg" alt="" onClick={()=>{navigate(route+prevArticle, {state: {category: location.state.category}})}}/>
+                    <img src="/up.svg" alt="" onClick={ () => {
+                        navigate(
+                            route+prevArticle,
+                            {state: {category: location.state.category}}
+                            )
+                    }}/>
                     <img src="/down.svg" alt="" onClick={()=>{navigate(route+nextArticle, {state: {category: location.state.category}})}}/>
                     <img src="/close_.svg" alt="" onClick={() => {
                         navigate(back)

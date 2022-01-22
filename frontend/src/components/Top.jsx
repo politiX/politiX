@@ -16,12 +16,12 @@ export default function Top() {
 
         if (state.contains('active') === false) {
             state.add('active')
-            w.style.width = '140px';
+            w.style.height = '140px';
             obj.style.top = '-5px'
             setSrc('/close.svg')
         } else {
             state.remove('active')
-            w.style.width = '0';
+            w.style.height = '0';
             obj.style.top = '-140px'
             setSrc('/menu.svg')
         }
