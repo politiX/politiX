@@ -33,6 +33,11 @@ export default function Article({data, location, pageContext}) {
             end = "";
         }
 
+        if (i === data.allStrapiArticle.edges[0].node.micro_article_container.length - 1) {
+            end = "end"
+            console.log('end')
+        }
+
         return direction;
     };
 
@@ -58,33 +63,6 @@ export default function Article({data, location, pageContext}) {
             });
         }, 300);
     };
-
-    if (typeof window !== undefined) {
-        window.onscroll = function () {
-            fitImgStick();
-        };
-    }
-
-    function fitImgStick() {
-        let articleELements = document.querySelectorAll(".micro_w");
-        let imgSticks = document.querySelectorAll(".imgStick");
-        // let iconDots = document.querySelectorAll(".img_w");
-        // for (let i = 0; i < articleELements.length - 1; i++) {
-        //   let stickLength =
-        //     iconDots[i + 1].offsetTop + iconDots[i].offsetTop;
-        //     // imgSticks[i].setAttribute("style", "top:" + stickLength / 2 + "px");
-        //     imgSticks[i].setAttribute("style", "height:" + stickLength + "px;");
-        //   console.log(iconDots[i + 1].offsetTop);
-        //   console.log(iconDots[i].offsetTop);
-        //   console.log(iconDots[i]);
-        // }
-        let lastELement = articleELements[articleELements.length - 1];
-        let lastImgStick = lastELement.children[1];
-        //  = lastIcon.children[1];
-        if (!lastImgStick.classList.contains("end")) {
-            lastImgStick.classList.add("end");
-        }
-    }
 
     return (
         <div className={styles.timeline}>
