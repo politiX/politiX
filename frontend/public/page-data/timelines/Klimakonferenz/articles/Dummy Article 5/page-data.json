@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-article-jsx",
-    "path": "/timelines/Klimakonferenz/articles/Dummy Article 5",
-    "result": {"data":{"allStrapiArticle":{"edges":[{"node":{"id":"Article_61ccc69089442300160c930d","micro_article_container":[],"date":"29.12.2021","title":"Dummy Article 5"}}]}},"pageContext":{"article":"Dummy Article 5"}},
-    "staticQueryHashes": ["3985992580"]}

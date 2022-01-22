@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Dummy Timeline 2",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Dummy Timeline 2","articles":[{"id":"61ccb08071e22c0016932de2","title":"Dummy Article 2","preview":"Dummy Article 2","date":"29.12.2021"}]}}],"distinct":["Wirtschaft"]}},"pageContext":{"timeline":"Dummy Timeline 2"}},
-    "staticQueryHashes": ["3985992580"]}

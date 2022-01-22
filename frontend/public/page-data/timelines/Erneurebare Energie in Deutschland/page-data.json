@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-timeline-jsx",
-    "path": "/timelines/Erneurebare Energie in Deutschland",
-    "result": {"data":{"allStrapiTimeline":{"edges":[{"node":{"title":"Erneurebare Energie in Deutschland","articles":[{"id":"61d563c9b8f2fa0016502bce","title":"<Missing Title>","preview":"Die Energieversorgung in Deutschland soll mehr und mehr klimaverträglicher werden und uns gleichzeitig unabhängiger vom Import der fossilen Brenn-, Kraft- und Heizstoffe machen.","published_at":"05.January.2022"},{"id":"61d56ce0b8f2fa0016502bdf","title":"<Missing Title>","preview":"Die Energieversorgung in Deutschland soll mehr und mehr klimaverträglicher werden. Dafür trat am 01.01.2020 ein neue Gesetzt in Kraft.","published_at":"05.January.2022"}]}}],"distinct":["Umwelt"]}},"pageContext":{"timeline":"Erneurebare Energie in Deutschland"}},
-    "staticQueryHashes": ["3985992580"]}
