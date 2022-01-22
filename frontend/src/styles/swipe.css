@@ -14,8 +14,7 @@
 
 .activeCategory {
     background-color: #F9991B;
-    padding: 10px;
-    padding-right: 5%;
+    padding: 10px 20px;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.12);
     width: 23%;
     position: absolute;

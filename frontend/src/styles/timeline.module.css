@@ -4,7 +4,6 @@
 }
 
 .timeline h1 {
-  margin-left: -2.5%;
   padding: 16px 25px;
   z-index: 3;
   color: white;
@@ -104,7 +103,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: -2.5%;
+  margin-left: -20px;
 }
 
 .topBar img:last-child {
