@@ -12,8 +12,6 @@ export default function Top() {
         let obj = e.target.previousSibling.childNodes[0]
         let w = e.target.previousSibling
 
-        console.log(w)
-
         if (state.contains('active') === false) {
             state.add('active')
             w.style.height = '140px';
