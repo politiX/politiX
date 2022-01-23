@@ -9,3 +9,8 @@
     padding: 10px 10px 50px 10px;
     margin: 5% auto 0 auto;
 }
+
+img{
+    position: relative;
+    margin-top: 10%;
+}
