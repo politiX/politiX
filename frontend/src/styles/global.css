@@ -85,7 +85,7 @@ nav {
 
 .content {
   padding: 0 20px;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 footer {
   display: flex;
