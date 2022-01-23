@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/global.css';
 import Header from './Header';
+import Footer from'./Footer';
 
 export default function Layout({ children, loadData, category }) {
     return (
@@ -9,9 +10,9 @@ export default function Layout({ children, loadData, category }) {
             <div className='content'>
                 { children }
             </div>
-            <footer>
+            <Footer>
                 <p>copyright politiX 2021</p>
-            </footer>
+            </Footer>
         </div>
     )
 }

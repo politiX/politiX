@@ -133,7 +133,7 @@ export default function Timeline({data}) {
                 </div>
             </Layout>
 
-            <div style={windowHeight}></div>
+            {/* <div style={windowHeight}></div> */}
         </div>
     );
 }

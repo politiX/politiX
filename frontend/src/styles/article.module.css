@@ -28,7 +28,6 @@
   width: 100%;
   padding: 10% 5%;
   padding-top: 80px;
-  padding-bottom: 20%;
   transform: translateX(-5%);
 }
 
@@ -85,6 +84,17 @@
   padding: 15px;
 }
 
+/* :global .img_w::before {
+ content: "-";
+ background-color: #ffe7c7;
+ color: #ffe7c7;
+ min-height: 50px;
+ height: 120%;
+ width: 5px;
+ top: 60%;
+ z-index: -1;
+} */
+
 :global .img_w img {
   width: 90%;
 }
@@ -93,12 +103,27 @@
   position: absolute;
   background-color: #ffe7c7;
   min-height: 50px;
-  height: 120%;
+  height: 100%;
   width: 5px;
-  top: 60%;
+  top: 50%;
   z-index: -1;
 }
 
+:global .topStick {
+  position: absolute;
+  background-color: #ffe7c7;
+  min-height: 50px;
+  height: 100%;
+  width: 5px;
+  top: -50%;
+  z-index: -1;
+  left: 50px;
+}
+
+:global .micro_w.right .topStick {
+  left: unset;
+  right: 52px;
+}
 :global .micro_w.left .imgStick {
   left: 50px;
 }
@@ -106,7 +131,10 @@
 :global .micro_w.right .imgStick {
   right: 52px;
 }
-
+:global .topStick.end {
+  /* height: 0; */
+  display: none;
+}
 :global .imgStick.end {
   /* height: 0; */
   display: none;
@@ -144,7 +172,7 @@
 .sideBar {
   background-color: #f9991b;
   width: 10px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   z-index: 5;
   float: left;
@@ -186,11 +214,10 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .sideBar {
-        margin-left: -20px;
-      }
+  .sideBar {
+    margin-left: -20px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-
 }
