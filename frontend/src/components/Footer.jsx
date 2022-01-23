@@ -24,7 +24,7 @@ export default function Footer() {
           <p>Impressum</p>
         </Link>{" "}
       </div>
-      <div className={styles.grid4}>
+      <div className={styles.footerLogo}>
         {" "}
         <Link to="/" state={{ category: "Bildung" }}>
           <img src="/logo.svg" alt="politiX" />

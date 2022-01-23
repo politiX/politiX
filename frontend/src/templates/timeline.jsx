@@ -118,8 +118,8 @@ export default function Timeline({data}) {
     };
 
     return (
-        <div className={styles.timeline}>
-            <Layout loadData={loadData} category={data.allStrapiTimeline.distinct[0]}>
+        <Layout loadData={loadData} category={data.allStrapiTimeline.distinct[0]}>
+                <div className={styles.timeline}>
                 <div className={styles.topBar}>
                     <h1>{timelineTitle}</h1>
                     <div className={styles.closeArticle} onClick={() => {
@@ -131,10 +131,9 @@ export default function Timeline({data}) {
                     {/* <div className={styles.scrollball}></div> */}
                     {articlePreviews}
                 </div>
+                </div>
+               {/* <div style={windowHeight}></div> */}
             </Layout>
-
-            {/* <div style={windowHeight}></div> */}
-        </div>
     );
 }
 
