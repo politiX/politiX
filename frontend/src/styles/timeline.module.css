@@ -83,6 +83,7 @@
 
 .scrollbar {
   position: fixed;
+  z-index: 1;
   width: 1%;
   left: 6%;
   height: 120%;
