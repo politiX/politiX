@@ -1,11 +1,10 @@
-import React from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Layout from "../components/Layout";
 import {graphql, navigate} from "gatsby";
 import {Link} from "gatsby";
 import * as styles from "../styles/timeline.module.css";
 
 export default function Timeline({data}) {
-    // console.log(data.allStrapiTimeline.edges[0].node.articles)
 
     const timelineTitle = data.allStrapiTimeline.edges[0].node.title;
 
@@ -33,8 +32,6 @@ export default function Timeline({data}) {
             </Link>
         )
     );
-
-    // console.log(articlePreviews)
 
     const loadData = (category) => {
         setTimeout(() => {
@@ -101,25 +98,47 @@ export default function Timeline({data}) {
         }
     }
 
-    let height;
-    if (document.readyStat) {
-        height =
-            document.body.clientHeight -
-            document.querySelector(".header").clientHeight -
-            document.querySelector("footer").clientHeight -
-            10 +
-            "px";
-    } else {
-        height = 600 + "px";
-    }
-    let windowHeight = {
-        height: height,
-        display: "block",
-    };
+    // let height;
+    // height =
+    //     document.body.clientHeight -
+    //     document.querySelector(".header").clientHeight -
+    //     document.querySelector("footer").clientHeight -
+    //     10 +
+    //     "px";
+    //
+    // let windowHeight = {
+    //     height: height,
+    //     display: "block",
+    // };
+    //
+    // document.querySelector('.buffer').style.height = windowHeight.height
+    // console.log(windowHeight.height)
+    // if (document.readyStat) {
+    //
+    // } else {
+    //     height = 600 + "px";
+    // }
+
+    const [height, setHeight] = useState(0)
+    const ref = useRef(null)
+    let set = false
+
+    useEffect(() => {
+        // document.querySelector('.article_preview_w:last-child')
+        // let nodes = document.querySelectorAll('.article_preview_w')
+        // nodes[nodes.length-1].classList.add('active')
+        // let nHeight = nodes[nodes.length-1].clientHeight
+        // console.log(nHeight)
+        // nodes[nodes.length-1].classList.remove('active')
+        setHeight(document.querySelector('.' + ref.current.parentNode.className).parentNode.clientHeight - 212)
+        set = true
+        console.log(document.querySelector('.buffer').clientHeight)
+    }, [set])
+
 
     return (
         <Layout loadData={loadData} category={data.allStrapiTimeline.distinct[0]}>
-                <div className={styles.timeline}>
+            <div className={styles.timeline} ref={ref}>
                 <div className={styles.topBar}>
                     <h1>{timelineTitle}</h1>
                     <div className={styles.closeArticle} onClick={() => {
@@ -130,10 +149,12 @@ export default function Timeline({data}) {
                     <div className={styles.scrollbar}></div>
                     {/* <div className={styles.scrollball}></div> */}
                     {articlePreviews}
+
                 </div>
-                </div>
-               {/* <div style={windowHeight}></div> */}
-            </Layout>
+                <div className={'buffer'} style={{height: height}}></div>
+            </div>
+
+        </Layout>
     );
 }
 

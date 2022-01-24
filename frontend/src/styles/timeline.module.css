@@ -12,6 +12,10 @@
   margin-bottom: 0;
 }
 
+:global .buffer {
+  display: block;
+}
+
 :global .pub {
    float: right;
    font-size: 0;
@@ -70,6 +74,7 @@
   background-color: #f9991b;
   color: #f9991b;
   content: "-";
+  z-index: 1;
   position: absolute;
   left: 4%;
   transition: all 0.3s;

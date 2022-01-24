@@ -11,7 +11,7 @@ export default function Layout({ children, loadData, category }) {
                 { children }
             </div>
             <Footer>
-                <p>copyright politiX 2021</p>
+
             </Footer>
         </div>
     )

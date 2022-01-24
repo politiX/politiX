@@ -72,8 +72,6 @@ export default function Article({ data, location, pageContext }) {
       <Layout loadData={loadData} category={location.state.category}>
         <div className={styles.topBar}>
           <h1>{articleTitle}</h1>
-          {/* Hier muss noch der Link gebaut werden um zurück zur betreffenden Timeline zu kommen */}
-          {/* <Link to={navigate(-1)}> */}
           <img
             src="/up.svg"
             alt=""

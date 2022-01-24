@@ -1,15 +1,23 @@
-.footer {
+:global .footer {
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: #f5f5f5;
-    bottom: 0px;
-    position: relative;
+    background: linear-gradient(180deg, rgba(252,252,252,0) 0%, rgba(245,245,245,1) 20%);
+    bottom: -42px;
+    position: fixed;
     width: 95%;
     max-width: 1180px;
-    padding: 10px 2.5% 15px 2.5%;
+    padding: 10px 2.5% 5px 2.5%;
     margin: 5% auto 0 auto;
+    /*z-index: 2;*/
+    transition: all 0.2s;
 }
 
-.footer p {
+:global .footer.active {
+    bottom: 0;
+    transition: all 0.2s;
+}
+
+:global .footer p {
     font-size: 10px;
 }
