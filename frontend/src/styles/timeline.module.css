@@ -136,17 +136,46 @@
       left: 10%;
     }
     :global .dot {
-      left: 8%;
+      left: 7%;
     }
   }
+
+  @media only screen and (min-width: 1300px) {
+    :global .dot {
+      left: 3%;
+    }
+  }
+
+
 
 @media only screen and (min-width: 1440px) {
   .scrollbar {
     left: 16%;
   }
   :global .dot {
-    left: 14%;
+    left: 5%;
   }
+}
+  @media only screen and (min-width: 1680px) {
+    .scrollbar {
+      left: 20%;
+    }
+  }
+  @media only screen and (min-width: 1800px) {
+    .scrollbar {
+      left: 23%;
+    }
+    :global .dot {
+      left: 6%;
+    }
+    @media only screen and (min-width: 1920px) {
+      .scrollbar {
+        left: 24%;
+      }
+      :global .dot {
+        left: 5.5%;
+      }
+    }
 }
 
 
