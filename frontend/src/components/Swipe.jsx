@@ -35,8 +35,8 @@ export default function Swipe({ categories, handleSwiperClick }) {
         slideToClickedSlide={true}
         simulateTouch={true}
         navigation={true}
-        nextEl={".swiper-button-next"}
-        prevEl={".swiper-button-prev"}
+        nextel={".swiper-button-next"}
+        prevel={".swiper-button-prev"}
       >
         {navItems}
       </Swiper>
